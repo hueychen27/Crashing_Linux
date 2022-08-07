@@ -9,7 +9,7 @@ Clear='\033[0m'
 echo "Use keyboard shortcut ctrl+c to exit."
 echo "Type 0 for bash fork."
 echo "Type 1 for perl fork (Use sudo apt install perl to install perl)"
-echo -e "${Red}Will crash your computer!"
+echo -e "${Red}Will crash your computer!${Clear}"
 
 read option
 
