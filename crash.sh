@@ -8,9 +8,11 @@ Clear='\033[0m'
 
 echo "Use keyboard shortcut ctrl+c to exit."
 echo "Type 0 for bash fork."
-echo "Type 1 for perl fork (Use sudo apt install perl to install perl)"
+echo "Type 1 for perl fork."
+echo "Type 2 for ruby fork."
 echo -e "${Red}Will crash your computer!${Clear}"
 
+printf ">> "
 read option
 
 main() {
@@ -27,8 +29,15 @@ main() {
         sleep 1
         echo -e "${Green}Exit with ctrl+c.${Clear}"
         sleep 4
-        echo -e "${Red}Perl Fork Bomb!!!1!1!11111111"${Clear}
-        perl -e "fork while fork" &
+        echo -e "${Red}Perl Fork Bomb!!!1!1!11111111${Clear}"
+        perl fork_bomb.pl
+    elif [ $option == 2 ]; then
+        echo -e "${Green}In 5 seconds, this ruby fork bomb will run.${Clear}"
+        sleep 1
+        echo -e "${Green}Exit with ctrl+c.${Clear}"
+        sleep 4
+        echo -e "${Red}Ruby Fork Bomb!1!!1!!1!!1!1!!1!1!1!1!11${Clear}"
+        ruby fork_bomb.rb
     else
         echo -e "${Red}Choose something valid. Exiting... Goodbye!${Clear}"
         exit 1
