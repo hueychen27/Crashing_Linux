@@ -19,15 +19,15 @@ if ! [[ $option =~ $re ]]; then
     exit 1
 fi
 
-if [ $option -eq 1 ]; then
+if [ $option == 1 ]; then
     sudo apt install perl ruby
     echo -e "${Green}Done!${Clear}"
     exit 0
-elif [ $option -eq 2 ]; then
+elif [ $option == 2 ]; then
     sudo dnf install perl ruby
     echo -e "${Green}Done!${Clear}"
     exit 0
-elif [ $option -eq 3 ]; then
+elif [ $option == 3 ]; then
     sudo pacman -S perl ruby
     echo -e "${Green}Done!${Clear}"
     exit 0
