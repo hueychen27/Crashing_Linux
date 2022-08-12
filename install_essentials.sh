@@ -20,15 +20,15 @@ if ! [[ $option =~ $re ]]; then
 fi
 
 if [ $option == 1 ]; then
-    sudo apt install perl ruby
+    sudo apt install perl ruby java
     echo -e "${Green}Done!${Clear}"
     exit 0
 elif [ $option == 2 ]; then
-    sudo dnf install perl ruby
+    sudo dnf install perl ruby java-1.8.0-openjdk.x86_64
     echo -e "${Green}Done!${Clear}"
     exit 0
 elif [ $option == 3 ]; then
-    sudo pacman -S perl ruby
+    sudo pacman -S perl ruby jdk-openjdk jre-openjdk 
     echo -e "${Green}Done!${Clear}"
     exit 0
 else
